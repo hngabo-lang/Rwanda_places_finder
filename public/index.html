@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Places</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Find Places in Rwanda</h1>
+    <p>Find restaurants, shops and services near you in Rwanda.</p>
+  </header>
+
+  <main>
+
+    <!-- search box -->
+    <form id="finder-form">
+      <input type="text" id="what-input" placeholder="What are you looking for? (e.g. restaurant, universities)" />
+      <input type="text" id="where-input" placeholder="Area (e.g. Kigali, Huye, Musanze)" value="Kigali" />
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- these only change how the results already on screen are shown -->
+    <div class="filters">
+      <label>
+        Category:
+        <select id="type-filter">
+          <option value="">All</option>
+        </select>
+      </label>
+      <label>
+        Sort by:
+        <select id="order-select">
+          <option value="distance">Closer than others</option>
+          <option value="name">Name (A-Z)</option>
+        </select>
+      </label>
+    </div>
+
+    <p id="msg-box"></p>
+
+    <h2>Results</h2>
+    <div id="spot-list"></div>
+
+  </main>
+
+  <footer>
+    <p>Data is got from the <a href="https://location.foursquare.com/products/places-api/" target="_blank">Foursquare Places API</a>.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
